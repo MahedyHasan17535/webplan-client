@@ -1,17 +1,10 @@
-import type { NextConfig } from "next";
+import type { NextConfig } from "next"
 
 const nextConfig: NextConfig = {
-  /* config options here */
-  cacheComponents: true,
-  partialPrefetching: true,
-  turbopack: {
-    rules: {
-      "*.css": {
-        loaders: ["@tailwindcss/turbopack"],
-        as: "*.css",
-      },
-    },
+  experimental: {
+    // image uploads go through a server action (ImgBB key stays on the server)
+    serverActions: { bodySizeLimit: "5mb" },
   },
-};
+}
 
-export default nextConfig;
+export default nextConfig
