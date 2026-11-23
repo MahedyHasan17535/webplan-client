@@ -1,4 +1,8 @@
 "use client"
+
+// Customer My Bookings: details link for every request and Cancel for pending
+// ones. The API refuses to cancel anything that is not pending or not theirs.
+
 import { useRouter } from "next/navigation"
 import Link from "next/link"
 import { Eye, XCircle } from "lucide-react"
